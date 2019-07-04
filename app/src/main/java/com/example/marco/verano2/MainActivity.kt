@@ -1,5 +1,6 @@
 package com.example.marco.verano2
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,7 +9,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    //Variables
+
      var pes: Int = 0
      var alt: Double = 0.0
      var imc: Double=0.0
@@ -33,10 +34,23 @@ class MainActivity : AppCompatActivity() {
             alt = edtestatura.text.toString().toDouble()
             imc= pes/(alt*alt)
             if(imc<25){
+
+                    val intent = Intent(this, MainActivityverde::class.java)
+                    intent.putExtra(MainActivityverde.EXTRA_IMC,imc)
+                    startActivity(intent)
+
                 Toast.makeText(this,"Tu imc es: $imc es adecuado",Toast.LENGTH_SHORT).show()
             }else if(imc>=25&&imc<30){
+
+                val intent = Intent(this, MainActivityAmarillo::class.java)
+                intent.putExtra(MainActivityAmarillo.EXTRA_IMC,imc)
+                startActivity(intent)
                 Toast.makeText(this,"Tu imc es: $imc es de sobrepeso",Toast.LENGTH_SHORT).show()
+
             }else if(imc>=30&&imc<=40){
+                val intent = Intent(this, MainActivityRojo::class.java)
+                intent.putExtra(MainActivityRojo.EXTRA_IMC,imc)
+                startActivity(intent)
                 Toast.makeText(this,"Tu imc es: $imc es obecidad",Toast.LENGTH_SHORT).show()
             }
 

@@ -1,7 +1,7 @@
 <resources>
     <string name="tvres">" I calculate body mass index"</string>
-    <string name="edtpeso">Enter your weight</string>
-    <string name="edtestatura">Enter your status</string>
+    <string name="edtpeso">Enter your weight in KG</string>
+    <string name="edtestatura">Enter your status in MT</string>
     <string name="btncalcular">Calculate imc</string>
     <string name="tvresult">Result</string>
     <string name="app_name">IMC</string>
