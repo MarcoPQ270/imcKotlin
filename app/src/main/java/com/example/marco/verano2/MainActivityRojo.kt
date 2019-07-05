@@ -17,7 +17,7 @@ class MainActivityRojo : AppCompatActivity() {
 
         if(intent!=null && intent.hasExtra(MainActivityRojo.EXTRA_IMC)){
             val imc:Double = intent.getDoubleExtra(MainActivityRojo.EXTRA_IMC, MainActivityRojo.DEFAULT_IMC)
-            tvcolorr.setText("Your body mass index is: "+imc.toString())
+            tvcolorr.setText("Tu indice de mas corporal es: "+imc.toString())
         }
     }
 }

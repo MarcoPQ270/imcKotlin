@@ -75,9 +75,26 @@ class MainActivity : AppCompatActivity() {
 
             when
             {
-                imc<25 ->  Toast.makeText(this,"Tu imc es: $imc es adecuado",Toast.LENGTH_SHORT).show()
-                imc>=25&&imc<30 ->  Toast.makeText(this,"Tu imc es: $imc es de sobrepeso",Toast.LENGTH_SHORT).show()
-                imc>=30&& imc<=40 -> Toast.makeText(this,"Tu imc es: $imc es obecidad",Toast.LENGTH_SHORT).show()
+                imc<25 ->
+                {
+                    val intent = Intent(this, MainActivityverde::class.java)
+                    intent.putExtra(MainActivityverde.EXTRA_IMC,imc)
+                    startActivity(intent)
+                }
+                imc>=25&&imc<30 ->
+                {
+                    val intent = Intent(this, MainActivityAmarillo::class.java)
+                    intent.putExtra(MainActivityAmarillo.EXTRA_IMC,imc)
+                    startActivity(intent)
+                    Toast.makeText(this,"Tu imc es: $imc es de sobrepeso",Toast.LENGTH_SHORT).show()
+                }
+                imc>=30&& imc<=40 ->
+                {
+                    val intent = Intent(this, MainActivityRojo::class.java)
+                    intent.putExtra(MainActivityRojo.EXTRA_IMC,imc)
+                    startActivity(intent)
+                    Toast.makeText(this,"Tu imc es: $imc es obecidad",Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

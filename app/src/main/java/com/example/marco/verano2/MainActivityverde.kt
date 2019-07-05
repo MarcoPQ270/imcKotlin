@@ -19,7 +19,7 @@ class MainActivityverde : AppCompatActivity() {
 
         if(intent!=null && intent.hasExtra(EXTRA_IMC)){
             val imc:Double = intent.getDoubleExtra(EXTRA_IMC, DEFAULT_IMC)
-            tvecolor.setText("Your body mass index is: "+imc.toString())
+            tvecolor.setText("Tu indice de mas corporal es: "+imc.toString())
         }
     }
 }

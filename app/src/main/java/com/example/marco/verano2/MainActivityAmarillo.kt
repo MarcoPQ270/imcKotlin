@@ -18,7 +18,7 @@ class MainActivityAmarillo : AppCompatActivity() {
 
         if(intent!=null && intent.hasExtra(MainActivityAmarillo.EXTRA_IMC)){
             val imc:Double = intent.getDoubleExtra(MainActivityAmarillo.EXTRA_IMC, MainActivityAmarillo.DEFAULT_IMC)
-            tvecolora.setText("Your body mass index is: "+imc.toString())
+            tvecolora.setText("Tu indice de mas corporal es: "+imc.toString())
         }
     }
 }
