@@ -4,6 +4,7 @@
     <string name="tvres">Calculo indice de masa corporal</string>
     <string name="edtpeso">Ingrese su peso en KG</string>
     <string name="edtestatura">Ingrese su estatura en MT</string>
-    <string name="btncalcular">Calcular imc</string>
+    <string name="btncalcular">Calcular imc (IF)</string>
+    <string name="btncalcula">Calcular imc (WHEN)</string>
     <string name="tvresult">Resultado</string>
 </resources>
